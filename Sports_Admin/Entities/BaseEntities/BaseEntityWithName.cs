@@ -8,6 +8,6 @@ namespace Sports_Admin_Core.Entities.BaseEntities
 {
     public abstract class BaseEntityWithName<TKeyType> :BaseEntity<TKeyType>
     {
-        public int Name { get; set; }
+        public string Name { get; set; }
     }
 }
