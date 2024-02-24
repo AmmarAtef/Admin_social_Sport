@@ -7,18 +7,14 @@ Make sure you EF Core CLI tools installed globally:
 
        cd /path/to/Awqaf.Application
 
-       dotnet ef migrations add AddYOUR_NEW_ENTITY_HERE --project ../Awqaf.Infrastructure
-       dotnet ef migrations add ManyApplicantTypeToSameApplicant --project ../Awqaf.Infrastructure
-       dotnet ef migrations add MoreLookupsForAwjuhElSarf --project ../Awqaf.Infrastructure
-
-       dotnet ef migrations add AddIssuanceCourtNewASarfSeeds --project ../Awqaf.Infrastructure
+       dotnet ef migrations add AddYOUR_NEW_ENTITY_HERE --project ../Infra
  
 2. database migrations:
 
 
        cd /path/to/Awqaf.Application
 
-       dotnet ef database update -- --environment malsati
+       dotnet ef database update -- --environment Development
 
 ### During Deployment: (using the (dotnet ef) CLI):
 database migrations:

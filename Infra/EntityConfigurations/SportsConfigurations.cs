@@ -34,8 +34,8 @@ namespace Infra.EntityConfigurations
                     CreatedBy = "System",
                 }
             };
-
             modelBuilder.Entity<Sport>().HasData(entities);
         }
+
     }
 }

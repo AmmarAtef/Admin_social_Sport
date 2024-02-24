@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Sports_Admin_Core.Entities
 {
-    public class Sport : FullAuditedBaseEntity<Guid>
+    public class Club : FullAuditedBaseEntity<Guid>
     {
-        public List<League> Leagues { get; set; }
+        public League League { get; set; }
+        public ICollection<FavoriteClubs> FavoriteClubs { get; set; }
     }
 }

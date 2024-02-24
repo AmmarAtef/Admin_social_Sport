@@ -4,7 +4,6 @@ using Sports_Admin_Core.Entities.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Sports_Admin_Core.Entities;
 using Infra.EntityConfigurations;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Infra.Data_Identity
 {
@@ -18,18 +17,30 @@ namespace Infra.Data_Identity
         public DbSet<Sport> Sports { get; set; }
         public DbSet<AppUser> AdminUsers { get; set; }
         public DbSet<AppRole> AppRoles { get; set; }
+        public DbSet<League> Leagues { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //sports table
+            // Sports table
             modelBuilder.ApplyConfiguration(new SportsConfigurations());
             SportsConfigurations.Seed(modelBuilder);
 
 
-            //appuser and approle
+            // Appuser and approle
             modelBuilder.ApplyConfiguration(new AppUserConfigurations());
             modelBuilder.ApplyConfiguration(new AppRoleConfigurations());
-            
+
+            // League table
+            modelBuilder.ApplyConfiguration(new LeagueConfigurations());
+
+            // Country table
+            modelBuilder.ApplyConfiguration(new CountryConfigurations());
+
+            // Club table
+            modelBuilder.ApplyConfiguration(new ClubConfigurations());
+
+            // Favorite Clubs
+            modelBuilder.ApplyConfiguration(new FavoriteClubsConfigurations());
 
             base.OnModelCreating(modelBuilder);
         }
