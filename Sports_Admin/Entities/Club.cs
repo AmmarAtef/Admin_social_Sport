@@ -9,6 +9,8 @@ namespace Sports_Admin_Core.Entities
 {
     public class Club : FullAuditedBaseEntity<Guid>
     {
+        public Guid Id { get; set; }
+        public String Name { get; set; }
         public League League { get; set; }
         public ICollection<FavoriteClubs> FavoriteClubs { get; set; }
     }

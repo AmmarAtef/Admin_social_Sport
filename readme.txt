@@ -5,7 +5,7 @@ Make sure you EF Core CLI tools installed globally:
 ### During Development: (using the (dotnet ef) CLI):
 1. adding the migration script:
 
-       cd /path/to/Awqaf.Application
+       cd /path/to/Sports_Admin/Api
 
        dotnet ef migrations add AddYOUR_NEW_ENTITY_HERE --project ../Infra
  
