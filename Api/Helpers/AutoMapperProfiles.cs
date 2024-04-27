@@ -1,4 +1,4 @@
-﻿using Api.Dto;
+﻿using Api.Dto.CountryDto;
 using AutoMapper;
 using Sports_Admin_Core.Entities;
 

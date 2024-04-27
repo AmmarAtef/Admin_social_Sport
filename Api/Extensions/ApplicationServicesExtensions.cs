@@ -1,6 +1,6 @@
 ﻿using Api.Helpers;
 using Infra.Repositories.Sports;
-using Sports_Admin_Core.IRepositories.Users_Clubs;
+using Sports_Admin_Core.UnitOfWorks;
 
 namespace Api.Extensions
 {

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Infra.Data_Identity;
 using Sports_Admin_Core.IRepositories.Sports;
-using Sports_Admin_Core.IRepositories.Users_Clubs;
+using Sports_Admin_Core.UnitOfWorks;
 
 namespace Infra.Repositories.Sports
 {
@@ -17,9 +17,9 @@ namespace Infra.Repositories.Sports
 
         public IClubRepository ClubRepository => new ClubRepository(_context);
 
-        public ICountryRepository countryRepository => new CountryRepository(_context);
+        public ICountryRepository CountryRepository => new CountryRepository(_context);
 
-        public ILeagueRepository leagueRepository => new LeagueRepository(_context);
+        public ILeagueRepository LeagueRepository => new LeagueRepository(_context);
 
         public async Task<bool> Complete()
         {
